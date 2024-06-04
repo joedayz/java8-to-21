@@ -1,4 +1,4 @@
-package org.example;
+package org.example.time;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
