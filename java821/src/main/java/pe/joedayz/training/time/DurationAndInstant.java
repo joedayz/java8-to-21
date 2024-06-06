@@ -1,4 +1,4 @@
-package org.example.time;
+package pe.joedayz.training.time;
 
 import java.time.Duration;
 import java.time.Instant;
