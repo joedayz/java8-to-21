@@ -1,0 +1,1 @@
+java -p output/mlibs -m simplecalculator
