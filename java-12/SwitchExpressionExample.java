@@ -25,46 +25,36 @@ public class SwitchExpressionExample {
                     };
                     System.out.println("Was lucky: " + wasLucky);
           }
-
-          public static void shortVersion() {
-                    var mood = Incomes.Good;
-
-                    // arrow syntax with no fall-through (only the arrow block will be executed)
-                    switch (mood) {
-                              case Good -> {
-				var easy = true;
-				System.out.println("\nKeep working");
-			}
-			case Regular, Bad -> {
-				// we can now declare vars with same name (each arrow has its own scope)
-				var easy = true;
-				System.out.println("\nGo home");
-				/*
-				 * we can only return inside a block and when switch
-				 * is used as statement
-				 */
-				return;
-			}
-                    }
-
-          }
-
           public static void longVersion() {
-                    var mood = Incomes.Bad;
-
-                    // arrow syntax with no fall-through (only the arrow block will be executed)
-                    var shouldIGo = switch (mood) {
-                              // accepts multiple case labels
-                              case Good, Regular -> {
-                                        yield true;
-                              }
-                              case Bad -> {
-                                        yield false;
-                              }
-                              // there is no need to use default (we covered all possible cases)
-                    };
-
-                    System.out.println("\nShould I go? " + shouldIGo);
+               var mood = Incomes.Good;
+     
+               // arrow syntax with no fall-through (only the arrow block will be executed)
+               var shouldIGo = switch (mood) {
+                    // accepts multiple case labels
+                    case Good, Regular -> {
+                         yield true;
+                    }
+                    case Bad -> {
+                         yield false;
+                    }
+                    // there is no need to use default (we covered all possible cases)
+               };
+     
+               System.out.println("\nShould I go? " + shouldIGo);
+          }
+     
+          public static void shortVersion() {
+               var mood = Incomes.Good;
+     
+               // cool syntax with no fall-through (only the arrow block will be executed)
+               var shouldIGo = switch (mood) {
+                    // accepts multiple case labels
+                    case Good, Regular -> true;
+                    case Bad -> false;
+                    // there is no need to use default (we covered all possible cases)
+               };
+     
+               System.out.println("\nShould I go? " + shouldIGo);
           }
 
           public static void inferringType() {
