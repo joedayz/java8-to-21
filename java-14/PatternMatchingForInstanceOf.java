@@ -67,12 +67,12 @@ class Dog extends Animal {
 		// then we cast to work with this type
 		Dog d1 = (Dog) o;
 		// only now we can performe our [business] logic to compare
-		return d1.name.equals(d1.name);
+		return this.name.equals(d1.name);
 	}
 
 	public boolean equals(Object o) {
 		// more straightforward
 		return (o instanceof Dog d1)
-			&& d1.name.equals(d1.name);
+			&& this.name.equals(d1.name);
 	}
 }

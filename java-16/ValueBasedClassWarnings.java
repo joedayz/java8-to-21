@@ -16,7 +16,7 @@
  */
 public class ValueBasedClassWarnings {
 	public static void main(String[] args) {
-		var d = new Double(10);
+		var d = Double.valueOf(10);
 
 		synchronized (d) {
 			System.out.println("Synchronized block using a value-based object");

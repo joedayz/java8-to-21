@@ -3,7 +3,7 @@ public class TextBlocksExample {
 		// Java 13
 
 		// Error (same line)
-		// String name = """Pat Q. Smith""";
+		//String name = """Pat Q. Smith""";
 
 		// 3 double-quote must be followed by line terminator (new line)
 		String niceJson = """

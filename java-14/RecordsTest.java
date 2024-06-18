@@ -36,11 +36,12 @@ public class RecordsTest {
 		record LocalRecord(int val) {
 			public void access() {
 				// Record is always static
-				// System.out.println("method var: " + aRecord);
+				//System.out.println("method var: " + aRecord);
 			}
 		}
 
 		var local = new LocalRecord(5);
+		
 		System.out.println("Local: " + local);
 	}
 }
@@ -59,7 +60,7 @@ record PointRecord(int x, @Validatable(validate = true) int y) {
 	public static final long serialVersionUID = 1L;
 
 	// Only static fields is allowed
-	// private int z;
+	//private int z;
 
 	/**
 	 * This is the canonical constructor declared by the compiler when
@@ -144,7 +145,7 @@ record PointRecord(int x, @Validatable(validate = true) int y) {
  */
 @Target(ElementType.RECORD_COMPONENT)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Validatable {
+@interface Validatable {
   boolean validate();
 }
 

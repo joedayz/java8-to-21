@@ -10,7 +10,7 @@ public class SealedTypesExample {
 
 	public static void sealed() {
 		// local class cannot extend/implement a sealed class/interface
-		// class NewCross extends Cross {}
+		//class NewCross extends Cross {}
 
 		System.out.println("My name is Neo");
 	}

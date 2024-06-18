@@ -62,3 +62,26 @@ final class Player extends GameEntity {
 final class Enemy extends GameEntity {}
 
 non-sealed class SceneryObject extends GameEntity {}
+
+final class Jose extends GameEntity {}
+
+
+
+// final class NoHijos{
+
+// }
+
+
+// class NoEsSuHijo extends NoHijos {  // error: class NoEsSuHijo is not a permitted subclass of sealed class NoHijos
+
+// }
+
+
+
+
+
+
+
+
+
+
